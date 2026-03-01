@@ -1,0 +1,15 @@
+{
+	"urls": [{
+			"url": "http://肥猫.com",
+			"name": "🚀1-肥猫"
+		},
+		{
+			"url": "clan://localhost/TVBox/tvbox-live-home.json",
+			"name": "🚀2-线路"
+		},
+		{
+			"url": "clan://localhost/TVBox/tvbox-live-x.json",
+			"name": "🚀3-X线路"
+		}
+	]
+}
