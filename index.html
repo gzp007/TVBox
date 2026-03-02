@@ -490,6 +490,59 @@ const result = {
     ]
 }
 
+result = {
+  "code": 1,
+  "msg": "数据列表",
+  "page": 1,
+  "pagecount": 4,
+  "limit": 50,
+  "total": 211,
+  "list": [{
+    "vod_id": 10001,
+    "vod_name": "电音",
+    "type_id": 2,
+    "type_name": "电音",
+    "vod_en": "electronic_music",
+    "vod_time": "2026-03-01 00:00:00",
+    "vod_remarks": "超清",
+    "vod_play_from": "高清线路",
+    "vod_play_url": "高清$https://www.w3school.com.cn/i/movie.mp4",
+    "vod_pic": "https://picsum.photos/400/225"
+  }, {
+    "vod_id": 10002,
+    "vod_name": "韩国歌团001",
+    "type_id": 3,
+    "type_name": "韩国歌团",
+    "vod_en": "korean_group_001",
+    "vod_time": "2026-03-01 00:00:00",
+    "vod_remarks": "超清",
+    "vod_play_from": "高清线路",
+    "vod_play_url": "高清$https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4",
+    "vod_pic": "https://picsum.photos/400/225"
+  }],
+  "class": [{
+    "type_id": 1,
+    "type_pid": 0,
+    "type_name": "我的收藏"
+  }, {
+    "type_id": 2,
+    "type_pid": 0,
+    "type_name": "电音"
+  }, {
+    "type_id": 3,
+    "type_pid": 0,
+    "type_name": "韩国歌团"
+  }, {
+    "type_id": 4,
+    "type_pid": 0,
+    "type_name": "歌团★"
+  }, {
+    "type_id": 5,
+    "type_pid": 0,
+    "type_name": "韩国太妍"
+  }]
+}
+
 document.open();
 document.write(JSON.stringify(result, null, 2));
 document.close();
