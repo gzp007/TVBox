@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>TVBox</title>
+</head>
+<body>
+<script>
+const urlParams = new URLSearchParams(location.search);
+let pg = parseInt(urlParams.get('pg')) || 1;
+
+const config = {
+  total: 50,    // 总视频数
+  limit: 20,    // 每页条数
+  type_name: "我的收藏",
+  play_from: "m3u8"
+};
+
+const pagecount = Math.ceil(config.total / config.limit);
+if (pg < 1) pg = 1;
+if (pg > pagecount) pg = pagecount;
+
+const list = [];
+const start = (pg - 1) * config.limit + 1;
+const end = pg * config.limit;
+
+for (let i = start; i <= end && i <= config.total; i++) {
+  list.push({
+    vod_id: 10000 + i,
+    vod_name: `视频${i}`,
+    type_id: 1,
+    type_name: config.type_name,
+    vod_en: `video${i}`,
+    vod_time: "2026-03-01 00:00:00",
+    vod_remarks: "超清",
+    vod_play_from: config.play_from,
+    vod_play_url: `播放$https://test.com/video${i}.m3u8`,
+    vod_pic: "https://picsum.photos/400/225"
+  });
+}
+
+const result = {
+  code: 1,
+  msg: "数据列表",
+  page: pg,
+  pagecount: pagecount,
+  limit: config.limit,
+  total: config.total,
+  list: list,
+  class: [{ type_id: 1, type_pid: 0, type_name: config.type_name }]
+};
+
+document.open();
+document.write(JSON.stringify(result, null, 2));
+document.close();
+</script>
+</body>
+</html>
