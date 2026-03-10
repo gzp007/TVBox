@@ -16,3 +16,6 @@ Y2xhbjovL2xvY2FsaG9zdC9UVkJveC90di9saXZlLnR4dA==
 clan://localhost/TVBox/live.txt 对应的 Base64 编码值为：
 plaintext
 Y2xhbjovL2xvY2FsaG9zdC9UVkJveC9saXZlLnR4dA==
+
+
+https://gzp007.github.io/TVBox/
